@@ -1,5 +1,5 @@
 # Intergenerational Mobility in Education - Peru
-Código con el manejo de las bases de datos 02, 03 y 85 de la Encuesta Nacional de Hogares (ENAHO) para el periodo 2004-2021. Además, el código contiene el cálculo de la movilidad intergeneracional en educación de Perú para cohortes de 10 años desde 1950 a 1989. 
+Repositorio con el manejo de las bases de datos 02, 03 y 85 de la Encuesta Nacional de Hogares (ENAHO) para el periodo 2004-2021. Además, el repositorio contiene el cálculo de la movilidad intergeneracional en educación de Perú para cohortes de 10 años desde 1950 a 1989. 
 En específico, el código contiene:
 1. Unión de los módulos: Características de los Miembros del Hogar (02), Educación (03) y Gobernabilidad (85) de la ENAHO.
 2. Generación de las main variables: años de educación del jefe del hogar, años de educación del padre y años de educación de la madre. Estas variables se generan en base a la metodología propuesta por: 
