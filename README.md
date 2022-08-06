@@ -1,5 +1,6 @@
 # Intergenerational Mobility in Education - Peru
-El repositorio contiene el cálculo de la movilidad intergeneracional en educación para 4 cohortes de nacimiento (10 años, 1950 a 1989) de Perú. Además, se detalla el arreglo de los módulos 02, 03 y 85 de la Encuesta Nacional de Hogares (ENAHO) para el periodo 2004-2021. #
+El repositorio contiene el cálculo de la movilidad intergeneracional en educación para 4 cohortes de nacimiento (10 años, 1950 a 1989) de Perú. Además, se detalla el arreglo de los módulos 02, 03 y 85 de la Encuesta Nacional de Hogares (ENAHO) para el periodo 2004-2021.
+
 De forma detallada, el repositorio contiene lo siguiente:
 1. Unión de los módulos: Características de los Miembros del Hogar (02), Educación (03) y Gobernabilidad (85) de la ENAHO.
 2. Generación de las main variables: años de educación del jefe del hogar, años de educación del padre y años de educación de la madre. Estas variables se generan en base a la metodología propuesta por: 
