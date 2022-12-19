@@ -3,7 +3,7 @@ set more off
 capture log close
 
 ******
-* 1. Carpetas de trabajo
+* 1. Carpetas de trabajo y globals
 ******
 
 global o1 "C:/Users/Diego/OneDrive/Escritorio/Investigación/MEI"
@@ -25,32 +25,32 @@ global bases2 enaho01200
 ******
 
 forv i=2004(1)2014{
-foreach j of global bases2{
-local base1 = substr("`j'",1,7)
-local base2 = substr("`j'",8,3)
-use "$o2/`i'/`base1'-`i'-`base2'.dta", clear
+	foreach j of global bases2{
+		local base1 = substr("`j'",1,7)
+		local base2 = substr("`j'",8,3)
+		use "$o2/`i'/`base1'-`i'-`base2'.dta", clear
 
-quietly: rename a?o a_o
+		quietly: rename a?o a_o
 
-quietly: destring conglome vivienda hogar ubigeo codperso p208a2, replace
+		quietly: destring conglome vivienda hogar ubigeo codperso p208a2, replace
 
-save "$o2/`i'/`base1'-`i'-`base2'.dta", replace
-}
+		save "$o2/`i'/`base1'-`i'-`base2'.dta", replace
+	}
 }
 
 forv i=2004(1)2014{
-foreach j of global bases1{
-local base1 = substr("`j'",1,8)
-local base2 = substr("`j'",9,3)
-use "$o2/`i'/`base1'-`i'-`base2'.dta", clear
+	foreach j of global bases1{
+		local base1 = substr("`j'",1,8)
+		local base2 = substr("`j'",9,3)
+		use "$o2/`i'/`base1'-`i'-`base2'.dta", clear
 
-quietly: rename a?o a_o
+		quietly: rename a?o a_o
 
 
-quietly: destring conglome vivienda hogar ubigeo codperso, replace
+		quietly: destring conglome vivienda hogar ubigeo codperso, replace
 
-save "$o2/`i'/`base1'-`i'-`base2'.dta", replace
-}
+		save "$o2/`i'/`base1'-`i'-`base2'.dta", replace
+	}
 }
 
 
@@ -64,28 +64,28 @@ forv i=2004(1)2014{
 	
 	use "$o2/`i'/enaho01-`i'-200.dta", clear
 
-rename a?o a_o
+	rename a?o a_o
 
-keep a_o conglome vivienda hogar codperso ubigeo dominio estrato p203 p207 p208a p208a2 p209 facpob07 
-**Nota1: no hay p208a2 desde ENAHO 2012-2020** (Incorrecto)
+	keep a_o conglome vivienda hogar codperso ubigeo dominio estrato p203 p207 p208a p208a2 p209 facpob07 
+	**Nota1: no hay p208a2 desde ENAHO 2012-2020** (Incorrecto)
 
 
-merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01a-`i'-300.dta", keepus(p301a p301b p301c p301d) 
+	merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01a-`i'-300.dta", keepus(p301a p301b p301c p301d) 
 
-drop if _merge==1
+	drop if _merge==1
 
-drop _merge
+	drop _merge
 
-if (`i' > 2011) merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01b-`i'-2.dta", keepus(p45_1 p45_2)
-else merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01b-`i'-2.dta", keepus(p45_1 p45_2 p46 p47)
-**Nota1: en las preguntas p46 y p47 no hay información desde ENAHO 2012-2020. Nota2: se cambió el nombre de los .dta del 2004-2006 de "enaho01b-i-3" a "enaho01b-i-2"**
-drop if _merge==1
-drop _merge
-save "$o3/Base_`i'.dta", replace
-clear all
-if (`i' > 2004) append using "$o3/Base_2004.dta" "$o3/Base_`i'.dta", force
+	if (`i' > 2011) merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01b-`i'-2.dta", keepus(p45_1 p45_2)
+	else merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01b-`i'-2.dta", keepus(p45_1 p45_2 p46 p47)
+	**Nota1: en las preguntas p46 y p47 no hay información desde ENAHO 2012-2020. Nota2: se cambió el nombre de los .dta del 2004-2006 de "enaho01b-i-3" a "enaho01b-i-2"**
+	drop if _merge==1
+	drop _merge
+	save "$o3/Base_`i'.dta", replace
+	clear all
+	if (`i' > 2004) append using "$o3/Base_2004.dta" "$o3/Base_`i'.dta", force
 
-if (`i' > 2004) save "$o3/Base_2004.dta", replace
+	if (`i' > 2004) save "$o3/Base_2004.dta", replace
 }
 
 
@@ -215,7 +215,6 @@ lab val regnatnac regnatnac
 /*Años de educacion jefe y conyuge del hogar (METODOLOGÍA LUIS GARCIA)
 recode p301a (1/4 = 0) (5/6 = 6) (7/10 = 11) (11 = 16) (.=.), gen(nivelprevio)
 egen suma=rowtotal(p301b p301c)
-
 gen educacion = suma + nivelprevio
 */
 
