@@ -10,4 +10,4 @@ https://doi.org/10.18800/ECONOMIA.201801.005.
 5. Réplica de las regresiones realizadas por Torres, Parra & Rubio (2018).
 
 
-Nota: los resultados han sido validados. De todas formas, se deben utilizar con precaución. Cualquier sugerencia de mejora puede enviarme un correo a dffjs98@gmail.com
+Nota: los resultados han sido validados. De todas formas, el código se debe utilizar con precaución. Cualquier sugerencia de mejora puede enviarme un correo a dffjs98@gmail.com
