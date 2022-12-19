@@ -244,7 +244,7 @@ recode p45_2 (1 = 0) (2 = 3) (3 = 6) (4 = 9) (5 = 11) (6 = 12) (7 = 13) (8 = 14)
 destring a_o,replace
 gen añonac = .
 forv i=2004(1)2014{
-replace añonac = `i' - p208a if a_o ==`i'
+	replace añonac = `i' - p208a if a_o ==`i'
 }
 
 *Eliminar datos que no son del jefe del hogar y del conyuge
