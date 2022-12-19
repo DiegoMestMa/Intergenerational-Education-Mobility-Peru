@@ -2,8 +2,8 @@
  	
 	-Manejo y unión de los módulos 02, 03 y 85 de la Enaho-
 
-Nota: antes de utilizar este Do File, se debe utilizar 
-""
+Nota: antes de utilizar este Do File, se debe ver 
+"Unión de Módulos ENAHO y creación de variables - réplica Torres et al. (2018).do"
 
 Autor: Diego Mestanza
 
