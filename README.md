@@ -8,3 +8,6 @@ Torres, J., Parra, F., & Rubio, J. (2018). Transmisión educativa intergeneracio
 https://doi.org/10.18800/ECONOMIA.201801.005.
 4. Generación de las variables: departamento de nacimiento, departamento de residencia, región natural de nacimiento, región natural de residencia y área (urbana/rural) de residencia.
 5. Réplica de las regresiones realizadas por Torres, Parra & Rubio (2018).
+
+
+Nota: los resultados han sido validados. De todas formas, utilizar con precaución. Cualquier sugerencia de mejora puede enviarme un correo a dffjs98@gmail.com
