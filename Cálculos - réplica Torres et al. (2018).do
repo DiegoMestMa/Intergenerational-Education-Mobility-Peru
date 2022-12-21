@@ -1,6 +1,6 @@
 /*=======================================================
  	
-	-Manejo y unión de los módulos 02, 03 y 85 de la Enaho-
+	-Regresiones réplica de Torres et al. (2018)-
 
 Nota: antes de utilizar este Do File, se debe ver 
 "Unión de Módulos ENAHO y creación de variables - réplica Torres et al. (2018).do"
