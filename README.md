@@ -1,4 +1,4 @@
-# Intergenerational Mobility in Education - Peru
+# Intergenerational Mobility in Education with Peruvian data
 El repositorio contiene el cálculo de la movilidad intergeneracional en educación (MEI) para 4 cohortes de nacimiento (10 años, 1950 a 1989) de Perú. Además, se detalla el manejo de los módulos 02, 03 y 85 de la Encuesta Nacional de Hogares (ENAHO) para el periodo 2004-2021.
 
 De forma detallada, el repositorio contiene lo siguiente:
