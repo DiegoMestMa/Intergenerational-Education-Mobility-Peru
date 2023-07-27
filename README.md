@@ -6,7 +6,7 @@ Aquí podrás encontrar 2 Do Files:
 - [ENAHO.do](/ENAHO.do). En este Do File se realiza lo siguiente:
   1. Únión de los módulos Miembros del Hogar (02), Educación (03) y Gobernabilidad (85) de la ENAHO, desde el 2004 al 2014.
   2. Generación de las variables "años de educación del jefe del hogar", "años de educación del padre" y "años de educación de la madre". Estas variables se generan
-     en base a la metodología propuesta por Torres, Parra & Rubio (2018)[^1]
+     en base a la metodología propuesta por Torres, Parra & Rubio (2018).[^1]
   3. Generación de las variables "departamento de nacimiento", "departamento de residencia", "región natural de nacimiento", "región natural de residencia" y "área
      (urbana/rural) de residencia".
 - [regressions.do](/regressions.do). En este Do File se realizan las regresiones presentadas en el *paper* de Torres, Parra & Rubio (2018).
