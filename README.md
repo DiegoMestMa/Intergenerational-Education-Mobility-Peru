@@ -1,4 +1,4 @@
-# Intergenerational mobility in education with data from Peru
+# Movilidad intergeneracional en educación con datos de Perú
 Este repositorio contiene el cálculo de la Movilidad Intergeneracional en Educación (MIE) para 4 cohortes de nacimiento de 10 años (1950 a 1989) de Perú. Los datos utilizados para tal fin provienen del INEI-ENAHO.
 
 ## Contenido
