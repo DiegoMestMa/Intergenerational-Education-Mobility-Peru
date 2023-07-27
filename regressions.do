@@ -1,6 +1,6 @@
 /*=======================================================
  	
-	-Regresiones réplica de Torres et al. (2018)-
+   -Regresiones réplica de Torres, Parra & Rubio (2018)-
 
 Nota: antes de utilizar este Do File, se debe correr 
 "ENAHO.do"
