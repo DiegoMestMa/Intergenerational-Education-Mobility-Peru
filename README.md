@@ -12,4 +12,4 @@ Aquí podrás encontrar 2 Do Files:
      (urbana/rural) de residencia".
 - [regressions.do](/regressions.do). En este Do File se realizan las regresiones presentadas en el *paper* de Torres, Parra & Rubio (2018).
 
-Nota: cualquier sugerencia de mejora puede enviarme un correo a dffjs98@gmail.com
+Nota: cualquier sugerencia de mejora puedes enviarme un correo a dffjs98@gmail.com
