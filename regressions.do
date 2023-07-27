@@ -2,8 +2,8 @@
  	
 	-Regresiones réplica de Torres et al. (2018)-
 
-Nota: antes de utilizar este Do File, se debe ver 
-"Unión de Módulos ENAHO y creación de variables - réplica Torres et al. (2018).do"
+Nota: antes de utilizar este Do File, se debe correr 
+"ENAHO.do"
 
 Autor: Diego Mestanza
 
