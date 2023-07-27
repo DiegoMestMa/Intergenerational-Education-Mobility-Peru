@@ -80,8 +80,7 @@ forv i=2004(1)2014{
 
 	rename a?o a_o
 
-	keep a_o conglome vivienda hogar codperso ubigeo dominio estrato p203 p207 p208a p208a2 p209 facpob07 
-	**Nota1: no hay p208a2 desde ENAHO 2012-2020** (Incorrecto)
+	keep a_o conglome vivienda hogar codperso ubigeo dominio estrato p203 p207 p208a p208a2 p209 facpob07
 
 
 	merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01a-`i'-300.dta", keepus(p301a p301b p301c p301d) 
@@ -92,7 +91,8 @@ forv i=2004(1)2014{
 
 	if (`i' > 2011) merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01b-`i'-2.dta", keepus(p45_1 p45_2)
 	else merge 1:1 conglome vivienda hogar codperso using "$o2/`i'/enaho01b-`i'-2.dta", keepus(p45_1 p45_2 p46 p47)
-	**Nota1: en las preguntas p46 y p47 no hay información desde ENAHO 2012-2020. Nota2: se cambió el nombre de los .dta del 2004-2006 de "enaho01b-i-3" a "enaho01b-i-2"**
+	**Nota1: del 2012-2020, en las preguntas p46 y p47 no hay información. 
+	**Nota2: del 2004-2006, se cambió el nombre de los .dta de "enaho01b-i-3" a "enaho01b-i-2".
 	drop if _merge==1
 	drop _merge
 	save "$o3/Base_`i'.dta", replace
@@ -224,15 +224,7 @@ lab var regnatnac "Region natural de Nacimiento"
 lab def regnatnac 1 "Costa" 2 "Sierra" 3 "Selva"
 lab val regnatnac regnatnac
 
-
-
-/*Años de educacion jefe y conyuge del hogar (METODOLOGÍA LUIS GARCIA)
-recode p301a (1/4 = 0) (5/6 = 6) (7/10 = 11) (11 = 16) (.=.), gen(nivelprevio)
-egen suma=rowtotal(p301b p301c)
-gen educacion = suma + nivelprevio
-*/
-
-*Generar variable "Años de educacion jefe y conyuge del hogar" (METODOLOGÍA TORRES ET AL.)
+*Generar variable "Años de educacion jefe y conyuge del hogar" (metodología de Torres, Parra & Rubio (2018))
 
 gen educhijo = .
 replace educhijo=0 if p301a==1
@@ -248,7 +240,7 @@ replace educhijo=11+4 if p301a==9 & p301b>4 & p301b<6
 replace educhijo=16 if p301a==10
 replace educhijo=16+p301b if p301a==11
 
-*Generar variable "Años de educacion padres" (METODOLOGÍA TORRES ET AL.)
+*Generar variable "Años de educacion padres" (metodología de Torres, Parra & Rubio (2018))
 
 recode p45_1 (1 = 0) (2 = 3) (3 = 6) (4 = 9) (5 = 11) (6 = 12) (7 = 13) (8 = 14) (9 = 16) (10=.) (.=.), gen(educpapa)
 
@@ -271,8 +263,8 @@ drop if p208a>64
 *Eliminar datos de personas con fecha de nacimiento fuera del intervalo 1950-1989
 drop if añonac<1950
 drop if añonac>1989
-*drop if codperso==2
 drop if educhijo==.
+
 tab educhijo
 
 
