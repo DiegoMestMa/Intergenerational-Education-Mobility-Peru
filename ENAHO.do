@@ -3,7 +3,7 @@
  	-Manejo y unión de los módulos 02, 03 y 85 de la Enaho-
 
 Nota: los módulos fueron descargados directamente de la
-web del INEI (http://iinei.inei.gob.pe/microdatos/). 
+web del INEI (https://proyectos.inei.gob.pe/microdatos/). 
 Luego, se guardó cada módulo en carpetas por año.
 Las demás modificaciones se encuentran aquí. 
 
