@@ -2,7 +2,6 @@
 Este repositorio contiene el cálculo de la Movilidad Intergeneracional en Educación (MIE) para 4 cohortes de nacimiento de 10 años (1950 a 1989) de Perú. Los datos utilizados para tal fin provienen del INEI-ENAHO.
 
 ## Contenido
-Aquí podrás encontrar 2 Do Files:
 - [ENAHO.do](/ENAHO.do). En este Do File se realiza lo siguiente:
   1. Únión de los módulos Miembros del Hogar (02), Educación (03) y Gobernabilidad (85) de la ENAHO, desde el 2004 al 2014.
   2. Generación de las variables "años de educación del jefe del hogar", "años de educación del padre" y "años de educación de la madre". Estas variables se generan
