@@ -1,5 +1,5 @@
 # Movilidad intergeneracional en educación con datos de Perú
-Este repositorio contiene el cálculo de la Movilidad Intergeneracional en Educación (MIE) para 4 cohortes de nacimiento de 10 años (1950 a 1989) de Perú. Los datos utilizados para tal fin provienen del INEI-ENAHO.
+Este repositorio contiene el cálculo de la Movilidad Intergeneracional en Educación (MIE) para 4 cohortes de nacimiento de 10 años (1950 a 1989) en Perú. Los datos utilizados para tal fin provienen del INEI-ENAHO. El método utilizado es la regresión lineal simple mediante Mínimos Cuadrados Ordinarios (MCO).
 
 ## Contenido
 - [ENAHO.do](/ENAHO.do). En este Do File se realiza lo siguiente:
@@ -8,7 +8,7 @@ Este repositorio contiene el cálculo de la Movilidad Intergeneracional en Educa
      en base a la metodología propuesta por Torres, Parra & Rubio (2018).[^1]
   3. Generación de las variables "departamento de nacimiento", "departamento de residencia", "región natural de nacimiento", "región natural de residencia" y "área
      (urbana/rural) de residencia".
-- [regressions.do](/regressions.do). En este Do File se realizan las regresiones presentadas en el *paper* de Torres, Parra & Rubio (2018).
+- [regressions.do](/regressions.do). En este Do File se realizan las regresiones presentadas en el *paper* de Torres, Parra & Rubio (2018). El coeficiente beta de cada regresión muestra la relación existente entre los años de educación del padre y el nivel educativo del hijo. Un coeficiente mayor indica  mayor  persistencia,  y  por  lo  tanto,  un  menor  movimiento    intergeneracional.
 
 Nota: cualquier sugerencia de mejora puedes enviarme un correo a dffjs98@gmail.com
 
