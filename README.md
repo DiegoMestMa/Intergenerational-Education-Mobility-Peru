@@ -8,7 +8,7 @@ Este repositorio contiene el cálculo de la Movilidad Intergeneracional en Educa
      en base a la metodología propuesta por Torres, Parra & Rubio (2018).[^1]
   3. Generación de las variables "departamento de nacimiento", "departamento de residencia", "región natural de nacimiento", "región natural de residencia" y "área
      (urbana/rural) de residencia".
-- [regressions.do](/regressions.do). En este Do File se realizan las regresiones presentadas en el *paper* de Torres, Parra & Rubio (2018). El coeficiente beta de cada regresión muestra la relación existente entre los años de educación del padre y el nivel educativo del hijo. Un coeficiente mayor indica  mayor  persistencia,  y  por  lo  tanto,  un  menor  movimiento    intergeneracional.
+- [regressions.do](/regressions.do). En este Do File se realizan las regresiones presentadas en el *paper* de Torres, Parra & Rubio (2018). El coeficiente beta de cada regresión muestra la relación existente entre los años de educación del padre y el nivel educativo del hijo. Un coeficiente mayor indica  mayor  persistencia y,  por  lo  tanto,  un  menor  movimiento    intergeneracional.
 
 Nota: cualquier sugerencia de mejora puedes enviarme un correo a dffjs98@gmail.com
 
