@@ -18,7 +18,7 @@ capture log close
 * 1. Carpetas de trabajo y globals
 ******
 
-global o1 "C:/Users/Diego/OneDrive/Escritorio/Investigación/MEI"
+global o1 "**UBICACIÓN DE TU CARPETA PRINCIPAL**"
 
 global o2 "$o1/1 Bases de Datos/"
 
